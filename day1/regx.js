@@ -23,20 +23,20 @@ console.log(n); // prints 11 , the first index position of J
  
  **/
 // 1 Numeric Charactrs
-let reg = /\d+/; //checks if there are any numeric characteres
+var reg = /\d+/; //checks if there are any numeric characteres
 reg.test("123"); //true
 reg.test("3w12d"); //true
 reg.test("asdsd"); //false
 
 // 2 Only Numeric Characters
 //     /^\d+$/
-let reg = /^\d+$/;
+var reg = /^\d+$/;
 reg.test("123"); //returns true
 reg.test("123sasd"); //returns false
 
 // 3 Floating number constants
 //   /^[0-9].[0-9]*[1-9]+$/
-let reg = /^[0-9].[0-9]*[1-9]+$/;
+var reg = /^[0-9].[0-9]*[1-9]+$/;
 reg.test("10"); //returns false
 reg.test("123.123"); //returns true
 
@@ -56,3 +56,6 @@ var queryString = {};
 uri.replace(new RegExp("([^?=&]+)(=([^&]*))?", "g"), function ($0, $1, $2, $3) {
   queryString[$1] = $3;
 });
+console.log("ID: " + queryString["product_id"]); // ID: 2140
+console.log("Name: " + queryString["product_name"]); // Name: undefined
+console.log("Category: " + queryString["category"]); // Category: 4
