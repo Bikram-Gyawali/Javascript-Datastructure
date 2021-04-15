@@ -1,0 +1,21 @@
+ in this program we will be doing hands on hasing techniquie
+ A hash table is a fixed-sized data structure in which the size is defined at the start.
+ Hash tables are excellent for quick storage and retrieval of data based on key-value
+ pairs. In JavaScript, JavaScript objects work this way by defining a key (property) and its
+ associated values
+ Two main function used in hashTabels are:-
+ 1 put() -> used for storing data into hash tables
+ 2 get() -> used for retriving data from the hash tables
+ both of these function has time comlexity of O(1)
+ the most important part of hash table is hash function.the hash function converts a specified key into an index for an attay that stores all of th data .the three primary requiremsnts for good hash function are:
+ 1 Deterministic        -> equal key produce equal hash values
+ 2 Efficiency           -> it should be O(1) in time complexity
+ 3 Unifom Distribution  ->it makes most use of the array
+ the most used technique for hashing is prime number hashing.The modulus division using prime numbers yields an array index in a distrubuted manner
+ Modulus number: 11
+         4 % 11     =4
+         7 % 11     =7
+         9 % 11     =9
+        15 % 11     =4
+ collisions can be seen with 15 and 4 resulting with the same key handling this collision is done with probing
+ the Probing is a technique to avoid collision ,the probing hashing technique finds the next available index in the array
