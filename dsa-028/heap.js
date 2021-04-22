@@ -14,18 +14,22 @@ Heap.prototype.swap = function (index1, index2) {
 Heap.prototype.parentIndex = function (index) {
   return Math.floor((index - 1) / 2);
 };
-Heap.prototype.leftChildIndex = function (index) {
+Heap.prototype.leftChildrenIndex = function (index) {
   return index * 2 + 1;
 };
 
-Heap.prototype.rightChildIndex = function (index) {
+Heap.prototype.rightChildrenIndex = function (index) {
   return index * 2 + 2;
 };
 Heap.prototype.parent = function (index) {
   return this.items[this.parentIndex(index)];
 };
-Heap.prototype.leftChildIndex = function (index) {
-  return this.items[this.leftChildIndex(index)];
+Heap.prototype.leftChild = function (index) {
+  return this.items[this.leftChildrenIndex(index)];
+};
+
+Heap.prototype.rightChild = function (index) {
+  return this.items[this.rightChildrenIndex(index)];
 };
 Heap.prototype.peek = function (item) {
   return this.items[0];
@@ -66,7 +70,7 @@ MinHeap.prototype.bubbleUp = function () {
 function MinHeap() {
   this.items = [];
 }
-inHeap.prototype = Object.create(Heap.prototype); // inherit helpers from heap by copying prototype
+MinHeap.prototype = Object.create(Heap.prototype); // inherit helpers from heap by copying prototype
 MinHeap.prototype.bubbleDown = function () {
   var index = 0;
   while (this.leftChild(index) && this.leftChild(index) < this.items[index]) {
@@ -114,7 +118,7 @@ MinHeap.prototype.bubbleDown = function () {
     (this.leftChild(index) < this.items[index] ||
       this.rightChild(index) < this.items[index])
   ) {
-    var smallerIndex = this.leftChildIndex(index);
+    var smallerIndex = this.leftChildrenIndex(index);
     if (
       this.rightChild(index) &&
       this.rightChild(index) < this.items[smallerIndex]
@@ -168,7 +172,7 @@ MaxHeap.prototype.bubbleDown = function () {
     (this.leftChild(index) > this.items[index] ||
       this.rightChild(index) > this.items[index])
   ) {
-    var biggerIndex = this.leftChildIndex(index);
+    var biggerIndex = this.leftChildrenIndex(index);
     if (
       this.rightChild(index) &&
       this.rightChild(index) > this.items[biggerIndex]
@@ -226,3 +230,18 @@ console.log(maxHeapExample.poll());
 console.log(maxHeapExample.poll());
 console.log(maxHeapExample.poll());
 console.log(maxHeapExample.poll());
+var array1 = [10, 23, 1, 45, 19, 16, 00, 100];
+function getKthSmallestValue(array, k) {
+  var minH = new MinHeap();
+  for (var i = 0; i < array1.length; i++) {
+    minH.add(array[i]);
+  }
+  for (var i = 1; i < k; i++) {
+    minH.poll();
+  }
+  return minH.poll();
+}
+
+console.log(getKthSmallestValue(array1, 2));
+console.log(getKthSmallestValue(array1, 3));
+console.log(getKthSmallestValue(array1, 5));
