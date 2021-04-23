@@ -18,6 +18,7 @@ function KnapSack(index, weights, values, target, matrixDP) {
     console.log("currentplus", currentPlusOther);
     result = Math.max(current, currentPlusOther);
   }
+  matrixDP[index + "-" + target] = result;
   return result;
 }
 var weights = [1, 2, 4, 2, 5];
