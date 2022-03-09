@@ -129,5 +129,5 @@ function SHA1 (message) {
     return HH
   }
   
-const anshu=SHA1("Anshu");
-console.log(anshu);
+  //console.log(SHA1("Bikram"));
+; //ec8cf81333fd26a94fbc812802442af522c6144b
