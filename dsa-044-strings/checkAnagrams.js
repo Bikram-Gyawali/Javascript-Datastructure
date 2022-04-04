@@ -56,3 +56,4 @@ const checkAnagramMap = (str1, str2) => {
 console.log(checkAnagramRegex('nodejs', 'denojs')); //true
 console.log(checkAnagramMap('bikram', 'markib'));   //true
 console.log(checkAnagramRegex('ohbhai', 'ehbhai')); //false
+
