@@ -3,7 +3,7 @@
  * a palindrome rearrange checker receives a string then we rearrange the given string so that if we can form any palindrome string . Also the string can only be a palindrome if the count of all characters is odd or if the only one character count id odd
  * */
 
- const palindromRearrange = (str) => {
+const palindromRearrange = (str) => {
   if (typeof str !== "string") {
     return "Not a string";
   }
@@ -24,11 +24,7 @@
   );
 };
 
-
-console.log(palindromRearrange("mom"));
-console.log(palindromRearrange("wow"));
-console.log(palindromRearrange("bikram"));
-console.log(palindromRearrange("ramram"));
-
-
-
+console.log(palindromRearrange("mom")); //true
+console.log(palindromRearrange("wow")); //true
+console.log(palindromRearrange("bikram")); //false
+console.log(palindromRearrange("ramram")); //true
