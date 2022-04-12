@@ -16,3 +16,5 @@ const CheckWordCount = (str, isCaseSensitive = false) => {
         {}
       )
   }
+
+  console.log(CheckWordCount("Hello I , I am I and I am here to check my i I "));
