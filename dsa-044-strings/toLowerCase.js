@@ -10,4 +10,4 @@ const lower=(str)=>{
     })
 }
 
-console.log(lower("BIKRAM"));
+console.log(lower("BIKRAM")); //bikram
