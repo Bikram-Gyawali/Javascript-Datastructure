@@ -26,4 +26,4 @@ const cockTailShakeSort = (items) => {
   return items;
 };
 
-console.log(cockTailShakeSort([1, 5, 3, 4]));
+console.log(cockTailShakeSort([1, 5, 3, 4])); // [1,3,4,5]
