@@ -123,10 +123,10 @@ function boyerMoore(str, pattern) {
 boyerMoore("jellyjam", "jelly");
 boyerMoore("bikram", "ram");
 
-function RabinKarpSearch() {
+function BiKarpSearch() {
   this.prime = 101;
 }
-RabinKarpSearch.prototype.rabinkarpFingerprintHash = function (str, endLength) {
+BiKarpSearch.prototype.rabinkarpFingerprintHash = function (str, endLength) {
   if (endLength == null) endLength = str.length;
   var hashInt = 0;
   for (var i = 0; i < endLength; i++) {
@@ -134,12 +134,12 @@ RabinKarpSearch.prototype.rabinkarpFingerprintHash = function (str, endLength) {
   }
   return hashInt;
 };
-var rks = new RabinKarpSearch();
+var rks = new BiKarpSearch();
 rks.rabinkarpFingerprintHash("sammie"); // 1072559917336
 rks.rabinkarpFingerprintHash("zammie"); // 1072559917343
 rks.rabinkarpFingerprintHash("sa"); // 9912
 rks.rabinkarpFingerprintHash("am"); // 11106
-RabinKarpSearch.prototype.recalculateHash = function (
+BiKarpSearch.prototype.recalculateHash = function (
   str,
   oldIndex,
   newIndex,
@@ -154,7 +154,7 @@ RabinKarpSearch.prototype.recalculateHash = function (
 };
 var oldHash = rks.rabinkarpFingerprintHash("sa"); // 9912
 rks.recalculateHash("same", 0, 2, oldHash, "sa".length); //  11106
-RabinKarpSearch.prototype.strEquals = function (
+BiKarpSearch.prototype.strEquals = function (
   str1,
   startIndex1,
   endIndex1,
@@ -174,7 +174,7 @@ RabinKarpSearch.prototype.strEquals = function (
   }
   return true;
 };
-RabinKarpSearch.prototype.rabinkarpSearch = function (str, pattern) {
+BiKarpSearch.prototype.bikarpSearch = function (str, pattern) {
   var T = str.length,
     W = pattern.length,
     patternHash = this.rabinkarpFingerprintHash(pattern, W),
@@ -195,7 +195,7 @@ RabinKarpSearch.prototype.rabinkarpSearch = function (str, pattern) {
   return -1;
 };
 
-var rks = new RabinKarpSearch();
-rks.rabinkarpSearch("SammieBae", "as"); // -1
-rks.rabinkarpSearch("SammieBae", "Bae"); // 6
-rks.rabinkarpSearch("SammieBae", "Sam"); // 0
+var rks = new BiKarpSearch();
+rks.bikarpSearch("SammieBae", "as"); // -1
+rks.bikarpSearch("SammieBae", "Bae"); // 6
+rks.bikarpSearch("SammieBae", "Sam"); // 0

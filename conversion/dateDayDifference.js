@@ -54,6 +54,6 @@ const DateDayDifference = (date1, date2) => {
       DateToDay(firstDateDay, firstDateMonth, firstDateYear)
   );
 };
-let diff = DateDayDifference("22/06/2000", "08/03/2022");
+let diff = DateDayDifference("22/06/2000", "01/06/2022"); //7928
 console.log(diff);
 // export { DateDayDifference };
