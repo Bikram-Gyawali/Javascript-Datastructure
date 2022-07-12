@@ -24,3 +24,5 @@ function romanToInt(str) {
   }
   return total;
 }
+
+console.log(romanToInt("MMCXXVII"));
