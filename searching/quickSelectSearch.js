@@ -8,8 +8,7 @@
  *
  * - The `k`th element is in its final sort index (if the array were to be sorted)
  * - All elements before index `k` are smaller than the `k`th element
- *
- */
+ * */
 export function quickSelectSearch (array, k) {
     if (!array || array.length <= k) {
       throw new Error('Invalid arguments')
@@ -46,4 +45,9 @@ export function quickSelectSearch (array, k) {
     return array
   }
   
+  
+  const arr = [1121111, 21, 333, 41, 5, 66, 7777, 28, 19, 11110]
+  quickSelectSearch(arr, 5) // [ 19, 21, 28, 41, 5, 66, 333, 11110, 1121111, 7777 ]
+  quickSelectSearch(arr, 2) // [ 19, 5, 21, 41, 28, 333, 11110, 1121111, 7777, 66 ]
+  quickSelectSearch(arr, 7) // [ 19, 5, 21, 41, 28, 66, 333, 7777, 11110, 1121111 ]
   
