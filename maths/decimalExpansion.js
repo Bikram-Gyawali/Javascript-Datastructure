@@ -59,3 +59,4 @@
     return decExp(a, b, base, exp, d, dlen)
   }
   
+  //copied code ... this is beutiful
