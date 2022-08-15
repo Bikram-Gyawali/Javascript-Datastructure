@@ -32,6 +32,3 @@ const CoPrimeCheck = (firstNumber, secondNumber) => {
 };
 
 export { CoPrimeCheck };
-* @param {Number} firstNumber first number for checking is prime or not.
-* @param {Number} secondNumber second number for checking is prime or not.
-* @returns return correspond boolean value, if both number are co-prime return `true`, else return `false`.
