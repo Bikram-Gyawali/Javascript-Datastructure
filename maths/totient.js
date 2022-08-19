@@ -9,7 +9,9 @@
 */
 
 export const EulersTotient = (n) => {
-   let res = n
+    // input: n: int
+    // output: phi(n): count of numbers b/w 1 and n that are coprime to n
+    let res = n
     for (let i = 2; i * i <= n; i++) {
       if (n % i === 0) {
         while (n % i === 0) {
