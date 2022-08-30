@@ -30,5 +30,4 @@
     return min
   }
   
-  export { FindMinIterator }
   
