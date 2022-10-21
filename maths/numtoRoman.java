@@ -10,6 +10,5 @@ class Solution {
                 sb.append(strs[i]);
             }
         }
-        return sb.toString();
     }
 }
