@@ -18,3 +18,6 @@ var bob = new someone();
 bob.attributes.name = 'Bob';
 
 var eve = new someone();
+
+
+
