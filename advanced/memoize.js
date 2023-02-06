@@ -10,3 +10,5 @@ function memoize(func) {
       return result;
     };
   }
+
+//   Memoize is a JavaScript function, that is used to cache the results of a given function to prevent calling computationally expensive routines multiple times with the same arguments.
