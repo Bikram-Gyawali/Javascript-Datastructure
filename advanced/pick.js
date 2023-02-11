@@ -6,3 +6,5 @@ function pick(obj, keys) {
     return acc
   }, {})
 }
+
+// The Pick function in JavaScript is used to select specific values from an object. It is a way to create a new object by selecting certain properties from a provided project. It is a functional programming technique that allows extracting a subset of properties from any object if the properties are available .
