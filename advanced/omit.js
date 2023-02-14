@@ -7,5 +7,13 @@ function omit(obj, keys) {
       }, {});
   }
 
+  const obj = {
+    id: 1,
+    name: 'Paul',
+    job: 'Senior Engineer',
+    twitter: 'https://www.twitter.com/paulknulst',
+    website: 'https://www.paulsblog.dev',
+};
 
-  
+const selected = omit(obj, ['id']);
+console.log(selected); 
