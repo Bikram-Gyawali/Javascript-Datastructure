@@ -1,24 +1,24 @@
 const promise1 = () =>
   new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve("Promise 1 resolved");
-        // reject("rejected promise 1");
+      // resolve("Promise 1 resolved");
+        reject("rejected promise 1");
     }, 400);
   });
 
 const promise2 = () =>
   new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve("Promise 2 resolved");
-    //   reject("rejected promise 2");
+      // resolve("Promise 2 resolved");
+      reject("rejected promise 2");
     }, 500);
   });
 
 const promise3 = () =>
   new Promise((resolve, reject) => {
     setTimeout(() => {
-        resolve("Promise 3 resolved");
-    //   reject("rejected promise 3");
+        // resolve("Promise 3 resolved");
+      reject("rejected promise 3");
     }, 200);
   });
 
