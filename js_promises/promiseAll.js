@@ -2,6 +2,7 @@ const promise1 = () =>
   new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve("Promise 1 resolved");
+      // reject("rejected promise 1");
     }, 400);
   });
 
@@ -15,8 +16,8 @@ const promise2 = () =>
 const promise3 = () =>
   new Promise((resolve, reject) => {
     setTimeout(() => {
-        resolve("Promise 3 resolved");
-    //   reject("rejected promise 3");
+      resolve("Promise 3 resolved");
+      // reject("rejected promise 3");
     }, 900);
   });
 
@@ -28,13 +29,15 @@ const getData = async () => {
     // console.log((afterTime - beforeTime) / 1000);
 
     const beforeTime = new Date();
-    await Promise.all([promise1(), promise2(), promise3()])
-      .then((res) => console.log(res))
-      .catch((err) => {
-        console.log(err);
-      });
+    const res = await Promise.all([promise1(), promise2(), promise3()]);
+    // .then((res) => console.log(res))
+    // .catch((err) => {
+    //   console.log(err);
+    // });
+    console.log(res);
     const afterTime = new Date();
     console.log((afterTime - beforeTime) / 1000 + " seconds");
+    
   } catch (error) {
     console.log(error);
   }
